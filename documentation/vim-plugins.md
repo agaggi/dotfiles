@@ -68,6 +68,8 @@ let g:lightline = {
 }
 ```
 
+A list of themes can be found [here](https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md).
+
 ## The NERDTree
 
 > To shift between windows, press `CR + w + w`. 
@@ -103,5 +105,5 @@ Then go to the following directory and compile `install.py`:
 Custom indentation characters can be set. For example:
 
 ```vim
-let g:indentLine_char = '│'
+let g:indentLine_char = '¦'
 ```
