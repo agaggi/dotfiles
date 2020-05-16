@@ -49,8 +49,6 @@ After `call plug#end()`, the colorscheme needs to be added. Any plugin preferenc
     - The color code for this shade is `#1d2021`
 
 ```vim
-"
-"
 call plug#end()
 
 let g:gruvbox_contrast_dark = "hard"
