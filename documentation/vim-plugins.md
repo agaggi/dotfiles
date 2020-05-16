@@ -34,7 +34,7 @@ When your desired plugins are added run the following vim command in normal mode
 ## Configuration Procedures
 
 ### Links
-- [Gruvbox color scheme](https://github.com/morhetz/gruvbox)
+- [Gruvbox](https://github.com/morhetz/gruvbox)
 - [lightline.vim](https://github.com/itchyny/lightline.vim)
 - [The NERDTree](https://github.com/preservim/nerdtree)
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
