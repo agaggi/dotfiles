@@ -26,6 +26,8 @@ Install zsh via your package manager. For debian:
 sudo apt install zsh
 ```
 
+To change shells, run `chsh -s /usr/zsh`.
+
 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) can be found here along with the installation instructions.
 
 ### Plugins
