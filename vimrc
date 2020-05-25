@@ -1,6 +1,5 @@
 " User Interface
 
-"set background=dark
 set relativenumber		" Line numbers are relative to where you are
 set number				" Sets the line numbers
 set ruler				" Displays the location of the cursor
@@ -31,7 +30,6 @@ set smartcase			" Switch to case sensitive when uppercase is typed
 call plug#begin(expand('~/.vim/plugged'))
 
 Plug 'arcticicestudio/nord-vim'
-"Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'ycm-core/YouCompleteMe'
@@ -40,11 +38,9 @@ Plug 'Yggdroot/indentline'
 call plug#end()
 
 
-" Gruvbox colorscheme
+" Nord colorscheme
 "-------------------------------------------------------------------------------
-
-"let g:gruvbox_contrast_dark = "hard"
-"colorscheme gruvbox 
+ 
 colorscheme nord
 
 "-------------------------------------------------------------------------------
