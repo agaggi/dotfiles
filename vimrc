@@ -29,7 +29,7 @@ set smartcase			" Switch to case sensitive when uppercase is typed
 
 call plug#begin(expand('~/.vim/plugged'))
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'joshdick/onedark.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'ycm-core/YouCompleteMe'
@@ -38,10 +38,10 @@ Plug 'Yggdroot/indentline'
 call plug#end()
 
 
-" Nord colorscheme
+" Onedark colorscheme
 "-------------------------------------------------------------------------------
  
-colorscheme nord
+colorscheme onedark
 
 "-------------------------------------------------------------------------------
 
@@ -60,7 +60,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "-------------------------------------------------------------------------------
 
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'onedark',
       \ }	
 
 "-------------------------------------------------------------------------------
