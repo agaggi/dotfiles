@@ -46,11 +46,9 @@ After `call plug#end()`, the colorscheme needs to be added. Any plugin preferenc
 
 ```vim
 call plug#end()
-
 "
 " Preferences
 "
-
 colorscheme onedark
 ```
 
