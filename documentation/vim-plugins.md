@@ -34,27 +34,24 @@ When your desired plugins are added run the following vim command in normal mode
 ## Configuration Procedures
 
 ### Links
-- [Gruvbox](https://github.com/morhetz/gruvbox)
+- [onedark.vim](https://github.com/joshdick/onedark.vim)
 - [lightline.vim](https://github.com/itchyny/lightline.vim)
 - [The NERDTree](https://github.com/preservim/nerdtree)
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 - [indentLine](https://github.com/Yggdroot/indentLine)
 
 
-## Gruvbox
+## onedark.vim
 After `call plug#end()`, the colorscheme needs to be added. Any plugin preferences should come **before** the colorscheme.
-
-- To set to the darker theme, add `set background=dark` into your `.vimrc`. 
-- `let g:gruvbox_contrast_dark = "hard"` changes the background to a darker shade. 
-    - The color code for this shade is `#1d2021`
 
 ```vim
 call plug#end()
 
-let g:gruvbox_contrast_dark = "hard"
-colorscheme gruvbox
+"
+" Preferences
+"
 
-set background=dark
+colorscheme onedark
 ```
 
 ## lightline.vim
@@ -63,7 +60,7 @@ You can add the color scheme after `call plug#end()` by adding the following:
 
 ```vim
 let g:lightline = {
-    \ 'colorscheme': 'darcula',
+    \ 'colorscheme': 'onedark',
     \
 }
 ```
@@ -86,10 +83,14 @@ map <C-z> :NERDTreeToggle<CR>
 
 ## YouCompleteMe
 
-Ensure the following packages are installed (debian):
+Ensure the following packages are installed:
 
 ```bash
+# Ubuntu
 sudo apt install build-essential cmake vim python3-dev
+
+# Manjaro
+sudo pacman -S cmake
 ```
 
 Then go to the following directory and compile `install.py`:

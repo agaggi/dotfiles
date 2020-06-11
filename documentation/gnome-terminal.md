@@ -4,9 +4,9 @@
 
 To obtain color schemes, [Gogh](https://github.com/Mayccoll/Gogh) has a variety of themes.
 
-> You will need to create a **default** profile in gnome-terminal or an unexpected error may occur
+> You will need to create a **default** profile in gnome-terminal or an error may occur
 
-Run the corresponding shell script to the theme you desire. For example:
+Run the respective shell script to the theme you desire. For example:
 
 ```bash
 ./gruvbox.sh
@@ -14,21 +14,27 @@ Run the corresponding shell script to the theme you desire. For example:
 
 Then change the newly created profile to the default.
 
-### Note
-
-The color hex value for the `hard` color scheme for gruvbox is `#1D2021`
-
 ## Zsh Shell
 
-Install zsh via your package manager. For debian:
+Install zsh via your package manager.
 
 ```bash
+# Ubuntu
 sudo apt install zsh
+
+# Manjaro
+sudo pacman -S zsh
 ```
 
 To change shells, run `chsh -s /usr/zsh`.
 
 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) can be found here along with the installation instructions.
+
+Run this command to install `Oh My Zsh`:
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 ### Plugins
 
