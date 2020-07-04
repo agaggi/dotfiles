@@ -34,14 +34,14 @@ When your desired plugins are added run the following vim command in normal mode
 ## Configuration Procedures
 
 ### Links
-- [onedark.vim](https://github.com/joshdick/onedark.vim)
+- [gruvbox](https://github.com/morhetz/gruvbox)
 - [lightline.vim](https://github.com/itchyny/lightline.vim)
 - [The NERDTree](https://github.com/preservim/nerdtree)
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 - [indentLine](https://github.com/Yggdroot/indentLine)
 
 
-## onedark.vim
+## gruvbox
 After `call plug#end()`, the colorscheme needs to be added. Any plugin preferences should come **before** the colorscheme.
 
 ```vim
@@ -49,7 +49,7 @@ call plug#end()
 "
 " Preferences
 "
-colorscheme onedark
+colorscheme gruvbox
 ```
 
 ## lightline.vim
@@ -58,7 +58,7 @@ You can add the color scheme after `call plug#end()` by adding the following:
 
 ```vim
 let g:lightline = {
-    \ 'colorscheme': 'onedark',
+    \ 'colorscheme': 'darcula',
     \
 }
 ```
