@@ -39,37 +39,22 @@ Plug 'Yggdroot/indentline'
 call plug#end()
 
 
-" Onedark colorscheme
-"-------------------------------------------------------------------------------
- 
+" gruvbox
 colorscheme gruvbox
-
-"-------------------------------------------------------------------------------
 
 
 "NERDTree 
-"-------------------------------------------------------------------------------
 map <C-z> :NERDTreeToggle<CR>   " Control + z toggles Nerd Tree
 
 " If the last window open is Nerd Tree, then it will automatically close
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"-------------------------------------------------------------------------------
 
-
-" Lightline bottombar
-"-------------------------------------------------------------------------------
-
+" lightline.vim
 let g:lightline = {
       \ 'colorscheme': 'darcula',
       \ }	
 
-"-------------------------------------------------------------------------------
-
 
 " indentLine
-" ------------------------------------------------------------------------------
-
 let g:indentLine_char = '¦'
-
-"-------------------------------------------------------------------------------
