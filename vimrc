@@ -1,5 +1,6 @@
 " User Interface
 
+set background=dark		" Makes the background darker (for gruvbox)
 set relativenumber		" Line numbers are relative to where you are
 set number				" Sets the line numbers
 set ruler				" Displays the location of the cursor
@@ -29,7 +30,7 @@ set smartcase			" Switch to case sensitive when uppercase is typed
 
 call plug#begin(expand('~/.vim/plugged'))
 
-Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'ycm-core/YouCompleteMe'
@@ -41,7 +42,7 @@ call plug#end()
 " Onedark colorscheme
 "-------------------------------------------------------------------------------
  
-colorscheme onedark
+colorscheme gruvbox
 
 "-------------------------------------------------------------------------------
 
@@ -60,7 +61,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "-------------------------------------------------------------------------------
 
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'darcula',
       \ }	
 
 "-------------------------------------------------------------------------------
