@@ -9,6 +9,7 @@ set showcmd				" Shows the last command entered
 set mouse=a				" Enables mouse functionality
 set laststatus=2		" Adds the bottom bar
 set noshowmode			" Removes things such as --INSERT--
+set encoding=utf-8		" Required for YouCompleteMe plugin
 
 " Formatting
 
