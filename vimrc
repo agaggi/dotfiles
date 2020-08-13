@@ -34,7 +34,6 @@ Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'Yggdroot/indentline'
 
 call plug#end()
 
@@ -53,8 +52,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " lightline.vim
 let g:lightline = {
       \ 'colorscheme': 'darcula',
-      \ }	
-
-
-" indentLine
-let g:indentLine_char = '¦'
+      \ }

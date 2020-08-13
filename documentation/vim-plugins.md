@@ -38,8 +38,6 @@ When your desired plugins are added run the following vim command in normal mode
 - [lightline.vim](https://github.com/itchyny/lightline.vim)
 - [The NERDTree](https://github.com/preservim/nerdtree)
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
-- [indentLine](https://github.com/Yggdroot/indentLine)
-
 
 ## gruvbox
 After `call plug#end()`, the colorscheme needs to be added. Any plugin preferences should come **before** the colorscheme.
@@ -97,12 +95,4 @@ Then go to the following directory and compile `install.py`:
 ~/.vim/plugged/YouCompleteMe/
 
 ./install.py
-```
-
-## indentLine
-
-Custom indentation characters can be set. For example:
-
-```vim
-let g:indentLine_char = '¦'
 ```
