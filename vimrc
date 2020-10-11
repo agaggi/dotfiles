@@ -17,7 +17,7 @@ filetype plugin indent on		" Loads file specific indenting and plugins
 set autoindent					" Lines inherit previous line indentation
 set wrap						" Wraps text that extends screen length
 set tabstop=4 softtabstop=4		" Makes a tab count as 4 spaces
-set colorcolumn=80				" 80 character limit
+set colorcolumn=90				" 80 character limit
 
 " Searching
 
@@ -30,7 +30,7 @@ set smartcase			" Switch to case sensitive when uppercase is typed
 
 call plug#begin(expand('~/.vim/plugged'))
 
-Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'ycm-core/YouCompleteMe'
@@ -38,8 +38,8 @@ Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 
-" gruvbox
-colorscheme gruvbox
+" nord
+colorscheme nord
 
 
 "NERDTree 
@@ -51,5 +51,5 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'darcula',
+      \ 'colorscheme': 'nord',
       \ }
