@@ -25,7 +25,7 @@ call plug#begin()
 call plug#end()
 ```
 
-When your desired plugins are added run the following vim command in normal mode:
+When your desired plugins are added run the following vim command in `normal` mode:
 
 ```vim
 :PlugInstall
@@ -34,20 +34,20 @@ When your desired plugins are added run the following vim command in normal mode
 ## Configuration Procedures
 
 ### Links
-- [gruvbox](https://github.com/morhetz/gruvbox)
+- [nord-vim](https://github.com/arcticicestudio/nord-vim)
 - [lightline.vim](https://github.com/itchyny/lightline.vim)
 - [The NERDTree](https://github.com/preservim/nerdtree)
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 
-## gruvbox
-After `call plug#end()`, the colorscheme needs to be added. Any plugin preferences should come **before** the colorscheme.
+## nord-vim
+After `call plug#end()`, the colorscheme needs to be added.
 
 ```vim
 call plug#end()
-"
-" Preferences
-"
-colorscheme gruvbox
+.
+.
+.
+colorscheme nord
 ```
 
 ## lightline.vim
@@ -56,7 +56,7 @@ You can add the color scheme after `call plug#end()` by adding the following:
 
 ```vim
 let g:lightline = {
-    \ 'colorscheme': 'darcula',
+    \ 'colorscheme': 'nord',
     \
 }
 ```
@@ -82,10 +82,10 @@ map <C-z> :NERDTreeToggle<CR>
 Ensure the following packages are installed:
 
 ```bash
-# Ubuntu
+# Debian
 sudo apt install build-essential cmake vim python3-dev
 
-# Manjaro
+# Arch
 sudo pacman -S cmake
 ```
 

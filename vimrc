@@ -1,14 +1,14 @@
 " User Interface
 
-set background=dark		" Makes the background darker (for gruvbox)
-set relativenumber		" Line numbers are relative to where you are
-set number				" Sets the line numbers
-set ruler				" Displays the location of the cursor
-set showmatch			" Shows matching parenthesis-like characters
-set showcmd				" Shows the last command entered
-set mouse=a				" Enables mouse functionality
-set laststatus=2		" Adds the bottom bar
-set noshowmode			" Removes things such as --INSERT--
+set number relativenumber	" Sets the line numbers
+set ruler					" Displays the location of the cursor
+set showmatch				" Shows matching parenthesis-like characters
+set showcmd					" Shows the last command entered
+set mouse=a					" Enables mouse functionality
+set ttymouse=sgr			" Fixes Alacritty mouse issue in Vim
+set laststatus=2			" Adds the bottom bar
+set noshowmode				" Removes things such as --INSERT--
+set cursorline				" Highlights the line you're currently on
 
 " Formatting
 
@@ -17,7 +17,7 @@ filetype plugin indent on		" Loads file specific indenting and plugins
 set autoindent					" Lines inherit previous line indentation
 set wrap						" Wraps text that extends screen length
 set tabstop=4 softtabstop=4		" Makes a tab count as 4 spaces
-set colorcolumn=90				" 80 character limit
+set colorcolumn=90				" 90 character limit
 
 " Searching
 
