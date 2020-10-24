@@ -6,7 +6,7 @@ To obtain the Nord color scheme, click [here](https://github.com/arcticicestudio
 
 > You will need to create a **default** profile in gnome-terminal or an error may occur
 
-Run the shell script located in the `src` folder to the theme you desire:
+Run the shell script located in the `src` folder:
 
 ```bash
 ./nord.sh
