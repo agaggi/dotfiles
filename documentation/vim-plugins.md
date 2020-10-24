@@ -13,7 +13,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 A directory will then be created in `~/.vim` and plugins can now be directly installed in vim.
 
-## Vim-Plug syntax and commands
+### Vim-Plug syntax and commands
 
 The following lines are needed when implementing plugins in `.vimrc`:
 

@@ -2,14 +2,14 @@
 
 ## Color scheme
 
-To obtain color schemes, [Gogh](https://github.com/Mayccoll/Gogh) has a variety of themes.
+To obtain the Nord color scheme, click [here](https://github.com/arcticicestudio/nord-gnome-terminal).
 
 > You will need to create a **default** profile in gnome-terminal or an error may occur
 
-Run the respective shell script to the theme you desire. For example:
+Run the shell script located in the `src` folder to the theme you desire:
 
 ```bash
-./gruvbox.sh
+./nord.sh
 ```
 
 Then change the newly created profile to the default.
@@ -19,10 +19,10 @@ Then change the newly created profile to the default.
 Install zsh via your package manager.
 
 ```bash
-# Ubuntu
+# Debian
 sudo apt install zsh
 
-# Manjaro
+# Arch
 sudo pacman -S zsh
 ```
 
