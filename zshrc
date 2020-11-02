@@ -1,39 +1,10 @@
-## Alex's zshrc
-#
-# This file is a combination of Manjaro's default zshrc and oh-my-zsh.
-# See my README files for details of how to obtain oh-my-zsh.
-
-# ----------------------------------------------------------------------------------------
-
-## Oh My Zsh
-
-export ZSH=$HOME/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
-# Options section
-setopt correct				# Auto correct mistakes
-setopt extendedglob         # Extended globbing. Allows using regular expressions with *
-setopt nocaseglob           # Case insensitive globbing
-setopt rcexpandparam        # Array expension with parameters
-setopt nocheckjobs          # Don't warn about running processes when exiting
-setopt numericglobsort		# Sort filenames numerically when it makes sense
-setopt nobeep               # No beep
-setopt appendhistory        # Immediately append history instead of overwriting
-setopt histignorealldups    # If a new command is a duplicate, remove the older one
-setopt autocd               # If only directory path is entered, cd there.
-
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' rehash true								# automatically find new executables in path 
-
-# Speed up completions
-zstyle ':completion:*' accept-exact '*(N)'
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
-
-# ----------------------------------------------------------------------------------------
+## ------------------------------------ Alex's zshrc -------------------------------------
 
 ## Customized and tidied-up Manjaro zshrc
+
+# Setting the default terminal
+TERM=alacritty
+export TERM
 
 # zshrc history
 HISTFILE=~/.zhistory
@@ -79,14 +50,15 @@ bindkey '^[Oc' forward-word
 bindkey '^[Od' backward-word                                    
 bindkey '^[[1;5D' backward-word                                 
 bindkey '^[[1;5C' forward-word                                  
-bindkey '^H' backward-kill-word                             # delete previous word with ctrl+backspace
-bindkey '^[[Z' undo                                         # Shift+tab undo last action
+bindkey '^H' backward-kill-word				# delete previous word with ctrl+backspace
+bindkey '^[[Z' undo                         # Shift+tab undo last action
 
 ## Alias section 
 
 # Ask for confirmation before overwriting something
 alias cp="cp -i"                                            
 alias mv="mv -i"
+alias ls='ls --color'
 
 alias df='df -h'                                            # Human-readable sizes
 alias free='free -m'                                        # Show sizes in MB
@@ -97,6 +69,10 @@ alias gitu='git add . && git commit && git push'			# Git commands
 autoload -U compinit colors zcalc
 compinit -d
 colors
+
+# Directory colors
+color_dir=$HOME/.dir_colors
+test -r $color_dir  && eval $(dircolors $color_dir)
 
 # enable substitution for prompt
 setopt prompt_subst

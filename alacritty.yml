@@ -24,10 +24,10 @@ window:
   padding:
     x: 6
     y: 6
-  title: Alacrity
+  title: Alacritty
   class:
-    instance: Alacrity
-    general: Alacrity
+    instance: Alacritty
+    general: Alacritty
 
 scrolling:
   history: 5000
