@@ -1,5 +1,6 @@
 # dotfiles
 
+```bash
 .
 ├── alacritty.yml
 ├── dir_colors
@@ -46,3 +47,4 @@
 └── zshrc
 
 15 directories, 28 files
+```
