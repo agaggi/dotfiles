@@ -2,10 +2,6 @@
 
 ## Customized and tidied-up Manjaro zshrc
 
-# Setting the default terminal
-TERM=alacritty
-export TERM
-
 # zshrc history
 HISTFILE=~/.zhistory
 HISTSIZE=1000
@@ -94,10 +90,10 @@ GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$reset_color%}"
 GIT_PROMPT_SUFFIX="%{$fg[green]%}]%{$reset_color%}"
 GIT_PROMPT_AHEAD="%{$fg[red]%}ANUM%{$reset_color%}"             # A"NUM"         - ahead by "NUM" commits
 GIT_PROMPT_BEHIND="%{$fg[cyan]%}BNUM%{$reset_color%}"           # B"NUM"         - behind by "NUM" commits
-GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"    # lightning bolt - merge conflict
-GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}●%{$reset_color%}"       # red circle     - untracked files
-GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}●%{$reset_color%}"     # yellow circle  - tracked files modified
-GIT_PROMPT_STAGED="%{$fg_bold[green]%}●%{$reset_color%}"        # green circle   - staged changes present = ready for "git push"
+GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"    # merge conflict
+GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}!%{$reset_color%}"       # untracked files
+GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}!%{$reset_color%}"     # tracked files modified
+GIT_PROMPT_STAGED="%{$fg_bold[green]%}!%{$reset_color%}"        # staged changes present = ready for "git push"
 
 parse_git_branch() {
 
@@ -170,10 +166,10 @@ export LESS=-r
 ## Plugins section: Enable fish style features
 
 # Use syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Use history substring search
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo
@@ -195,7 +191,7 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
         RPROMPT='$(git_prompt_string)'
 		
 		# Use autosuggestion
-		source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+		source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 		ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
   		ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
