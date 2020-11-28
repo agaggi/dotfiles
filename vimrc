@@ -9,6 +9,7 @@ set ttymouse=sgr			" Fixes Alacritty mouse issue in Vim
 set laststatus=2			" Adds the bottom bar
 set noshowmode				" Removes things such as --INSERT--
 set cursorline				" Highlights the line you're currently on
+set background=dark			" For Gruvbox
 
 " Formatting
 
@@ -30,7 +31,7 @@ set smartcase			" Switch to case sensitive when uppercase is typed
 
 call plug#begin(expand('~/.vim/plugged'))
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'ycm-core/YouCompleteMe'
@@ -39,7 +40,7 @@ call plug#end()
 
 
 " nord
-colorscheme nord
+colorscheme gruvbox
 
 
 "NERDTree 
