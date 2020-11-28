@@ -52,5 +52,5 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'wombat',
       \ }
