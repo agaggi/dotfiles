@@ -1,35 +1,33 @@
-" User Interface
+set shell=/bin/bash
 
-set number relativenumber	" Sets the line numbers
-set ruler					" Displays the location of the cursor
-set showmatch				" Shows matching parenthesis-like characters
-set showcmd					" Shows the last command entered
-set mouse=a					" Enables mouse functionality
-set ttymouse=sgr			" Fixes Alacritty mouse issue in Vim
-set laststatus=2			" Adds the bottom bar
-set noshowmode				" Removes things such as --INSERT--
-set cursorline				" Highlights the line you're currently on
-set background=dark			" For Gruvbox
+" User Interface
+set number relativenumber
+set ruler
+set showmatch
+set showcmd
+set mouse=a
+set ttymouse=sgr
+set laststatus=2
+set noshowmode
+set cursorline
+set background=dark
 
 " Formatting
-
-syntax on	          	 		" Enables syntax processing
-filetype plugin indent on		" Loads file specific indenting and plugins
-set autoindent					" Lines inherit previous line indentation
-set wrap						" Wraps text that extends screen length
-set tabstop=4 softtabstop=4		" Makes a tab count as 4 spaces
-set colorcolumn=90				" 90 character limit
+syntax on
+filetype plugin indent on
+set autoindent
+set wrap
+set tabstop=4 softtabstop=4
+set colorcolumn=90
 
 " Searching
-
-set incsearch			" Searches characters as they are entered
-set hlsearch			" Highlights search matches
-set ignorecase			" Ignores case when searching
-set smartcase			" Switch to case sensitive when uppercase is typed
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
 
 " Plugins
-
-call plug#begin(expand('~/.vim/plugged'))
+call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
@@ -38,10 +36,7 @@ Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
-
-" nord
 colorscheme gruvbox
-
 
 "NERDTree 
 map <C-z> :NERDTreeToggle<CR>   " Control + z toggles Nerd Tree
@@ -49,8 +44,6 @@ map <C-z> :NERDTreeToggle<CR>   " Control + z toggles Nerd Tree
 " If the last window open is Nerd Tree, then it will automatically close
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-
-" lightline.vim
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
