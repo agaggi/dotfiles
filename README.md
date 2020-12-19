@@ -1,7 +1,6 @@
 ```
 .
 ├── alacritty.yml
-├── bashrc
 ├── documentation
 │   ├── gnome-terminal.md
 │   └── vim-plugins.md
@@ -13,6 +12,7 @@
 │       ├── 0074.jpg
 │       ├── 0277.jpg
 │       ├── 0294.jpg
+│       ├── d.jpg
 │       └── wallpaper.jpeg
 ├── vimrc
 └── zshrc
