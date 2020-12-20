@@ -1,6 +1,7 @@
 ```
 .
 ├── alacritty.yml
+├── config.fish
 ├── documentation
 │   ├── gnome-terminal.md
 │   └── vim-plugins.md
@@ -17,5 +18,5 @@
 ├── vimrc
 └── zshrc
 
-3 directories, 13 files
+3 directories, 14 files
 ```
