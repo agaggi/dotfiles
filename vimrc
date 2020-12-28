@@ -10,7 +10,6 @@ set ttymouse=sgr
 set laststatus=2
 set noshowmode
 set cursorline
-set background=dark
 
 " Formatting
 syntax on
@@ -29,14 +28,14 @@ set smartcase
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme nord
 
 "NERDTree 
 map <C-z> :NERDTreeToggle<CR>   " Control + z toggles Nerd Tree
@@ -45,5 +44,6 @@ map <C-z> :NERDTreeToggle<CR>   " Control + z toggles Nerd Tree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'nord',
       \ }
+
