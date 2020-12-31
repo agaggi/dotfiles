@@ -10,6 +10,7 @@ set ttymouse=sgr
 set laststatus=2
 set noshowmode
 set cursorline
+set encoding=utf-8
 
 " Formatting
 syntax on
