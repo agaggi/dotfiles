@@ -11,4 +11,3 @@ alias mv="mv -i"
 
 alias df="df -h"		# Human readable sizes
 alias free="free -m"	# Show sizes in MB
-
