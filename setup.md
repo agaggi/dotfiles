@@ -51,5 +51,5 @@ Copy the `nord.colorscheme` file to the local configuration directory `~/.local/
 
 ### Settings
 
-- Window size 100 x 40
+- Window size 90 x 30
 - Hide scrollbar
