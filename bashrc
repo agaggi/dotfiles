@@ -16,4 +16,11 @@ alias df='df -h'		# Human readable sizes
 alias free='free -m'	# Show sizes in MB
 
 EDITOR='vim'			# Default editor
-PS1='[\u@\h \W]\$ '		# User prompt
+
+# User prompt
+PS1='\[\033[32m\]['
+PS1+='\[\033[33m\]\u'
+PS1+='\[\033[37m\]@'
+PS1+='\[\033[31m\]\h'
+PS1+=' \[\033[1;35m\]\W'
+PS1+='\[\033[0;32m\]]\$ \[\033[37m\]'
