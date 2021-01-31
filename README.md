@@ -33,6 +33,12 @@ A directory will then be created in `~/.vim` and plugins can now be directly ins
 
 Copy `config.fish` to `~/.config/fish/` and reload the terminal
 
+Enter the following command to hide the Fish greeting forever:
+
+```bash
+set -U fish_greeting
+```
+
 ### Bash Shell
 
 Erase the contents of the default `.bashrc` and insert the following:
@@ -43,13 +49,9 @@ source $HOME/{path to dotfiles/bashrc}
 
 ### Nord Colorscheme
 
-Copy the `nord.colorscheme` file to the local configuration directory `~/.local/share/konsole`. Then:
-
-1. Open the Settings menu and select *Edit Current Profile*
-2. Switch to the *Appearance* tab
-3. Select `Nord` from the list
+Run the `nord.sh` script and a profile will be created under *Preferences*.
 
 ### Settings
 
-- Window size 90 x 30
+- Window size 80 x 30
 - Hide scrollbar
