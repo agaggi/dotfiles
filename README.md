@@ -27,7 +27,7 @@ A directory will then be created in `~/.vim` and plugins can now be directly ins
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
     - Ensure you have `cmake` package installed (assuming Manjaro)
 
-## Konsole Terminal Emulator
+## Gnome-Terminal
 
 ### Fish Shell
 
