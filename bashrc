@@ -11,7 +11,12 @@ alias mv='mv -i'
 alias df='df -h'		# Human readable sizes
 alias free='free -m'	# Show sizes in MB
 
-EDITOR='vim'			# Default editor
+EDITOR='vim'
+TERM='konsole'
+
+# Nord dir_colors
+colors=$HOME/.dir_colors
+test -r $colors && eval $(dircolors $colors)
 
 # User prompt
 PS1='\[\033[32m\]['

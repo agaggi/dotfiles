@@ -29,16 +29,6 @@ A directory will then be created in `~/.vim` and plugins can now be directly ins
 
 ## Konsole
 
-### Fish Shell
-
-Copy `config.fish` to `~/.config/fish/` and reload the terminal
-
-Enter the following command to hide the Fish greeting forever:
-
-```bash
-set -U fish_greeting
-```
-
 ### Bash Shell
 
 Erase the contents of the default `.bashrc` and insert the following:
