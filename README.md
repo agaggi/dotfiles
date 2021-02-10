@@ -27,7 +27,7 @@ A directory will then be created in `~/.vim` and plugins can now be directly ins
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
     - Ensure you have `cmake` package installed (assuming Manjaro)
 
-## Gnome-Terminal
+## Konsole
 
 ### Fish Shell
 
@@ -50,7 +50,6 @@ source $HOME/{path to dotfiles/bashrc}
 ### Nord Colorscheme
 
 Copy the `nord.colorscheme` file to the local configuration directory `~/.local/share/konsole`. Then:
-Run the `nord.sh` script and a profile will be created under *Preferences*.
 
 1. Open the Settings menu and select *Edit Current Profile*
 2. Switch to the *Appearance* tab
@@ -59,5 +58,4 @@ Run the `nord.sh` script and a profile will be created under *Preferences*.
 ### Settings
 
 - Window size: 80 x 30
-- Font: Monospace Regular 11
 - Hide scrollbar
