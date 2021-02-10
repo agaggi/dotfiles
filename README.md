@@ -49,9 +49,15 @@ source $HOME/{path to dotfiles/bashrc}
 
 ### Nord Colorscheme
 
+Copy the `nord.colorscheme` file to the local configuration directory `~/.local/share/konsole`. Then:
 Run the `nord.sh` script and a profile will be created under *Preferences*.
+
+1. Open the Settings menu and select *Edit Current Profile*
+2. Switch to the *Appearance* tab
+3. Select `Nord` from the list
 
 ### Settings
 
-- Window size 80 x 30
+- Window size: 80 x 30
+- Font: Monospace Regular 11
 - Hide scrollbar
