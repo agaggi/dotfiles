@@ -1,6 +1,6 @@
 # Default text-editor and terminal
 set EDITOR "vim"
-set EDITOR "gnome-terminal"
+set EDITOR "konsole"
 
 alias ls="ls --color=auto"
 alias gitu="git add . && git commit && git push"
