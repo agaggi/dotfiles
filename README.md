@@ -47,5 +47,6 @@ Copy the `nord.colorscheme` file to the local configuration directory `~/.local/
 
 ### Settings
 
+- Font: Source code pro (10 pt.)
 - Window size: 80 x 30
 - Hide scrollbar
