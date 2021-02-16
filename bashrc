@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='ls --color=always --group-directories-first'
 alias gitu='git add . && git commit && git push'
 
 # Confirm we want to overwrite
@@ -10,9 +10,11 @@ alias mv='mv -i'
 
 alias df='df -h'		# Human readable sizes
 alias free='free -m'	# Show sizes in MB
+alias grep='grep --color=auto'
 
-EDITOR='vim'
-TERM='konsole'
+# Exporting
+export EDITOR='vim'
+export TERM='xterm-256color'
 
 # Nord dir_colors
 colors=$HOME/.dir_colors
