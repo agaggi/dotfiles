@@ -1,6 +1,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Start ssh agent for github/gitlab
+eval "$(ssh-agent -s)"
+
 # Setting history length
 HISTSIZE=1000
 HISTFILESIZE=2000
