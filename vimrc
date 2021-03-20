@@ -1,5 +1,3 @@
-set shell=/bin/bash
-
 " User Interface
 set number relativenumber
 set ruler

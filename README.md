@@ -25,7 +25,7 @@ A directory will then be created in `~/.vim` and plugins can now be directly ins
     - A list of themes can be found [here](https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md).
 - [The NERDTree](https://github.com/preservim/nerdtree)
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
-    - Ensure you have `cmake` package installed (assuming Manjaro)
+    - Ensure you have `cmake` installed, as well as any other dependencies
 
 ## Konsole
 
@@ -50,3 +50,4 @@ Copy the `nord.colorscheme` file to the local configuration directory `~/.local/
 - Font: Source code pro (10 pt.)
 - Window size: 80 x 30
 - Hide scrollbar
+- Don't remember window size
