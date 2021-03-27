@@ -199,13 +199,13 @@ makepkg -si
 Packages I install:
 
 ```bash
-pacman -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts ttf-twemoji
+yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts ttf-twemoji
 ```
 
 And specifically for laptops so **hibernation** works...
 
 ```bash
-pacman -S hibernator update-grub
+yay -S hibernator update-grub
 ```
 
 <hr>
