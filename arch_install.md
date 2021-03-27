@@ -189,7 +189,7 @@ pacman -S lib32-nvidia-utils lib32-nvidia-libgl steam
 git clone https://aur.archlinux.org/yay.git
 
 # Make ourselves the owner
-sudo chown -R  cloudcone:users yay
+sudo chown -R  {username}:users yay
 
 # Then compile
 cd yay
