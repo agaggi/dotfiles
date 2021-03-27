@@ -231,6 +231,12 @@ And update:
 sudo update-grub
 ```
 
-<hr>
+## Wrapping up
 
-Congratulations, you made it at long last...
+```bash
+# Exit your build 
+exit
+
+# Unmount all partitions
+umount -a
+```
