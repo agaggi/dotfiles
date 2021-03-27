@@ -202,10 +202,33 @@ Packages I install:
 yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts ttf-twemoji
 ```
 
+### Hibernation (optional)
+
 And specifically for laptops so **hibernation** works...
 
 ```bash
 yay -S hibernator update-grub
+```
+
+```bash
+sudo hibernator
+
+# Make a backup of our grub config just in case
+sudo cp /etc/default/grub /etc/default/grub.backup
+
+# Find the start of the physical offset of /swapfile
+sudo filefrag -v /swapfile
+```
+
+Then add the following to the grub config where `GRUB_CMDLINE_LINUX_DEFAULT` is:
+
+```bash
+GRUB_CMDLINE_LINUX_DEFAULT="quiet resume=UUID=f68ed3c5-da10-4288-890f-b83d8763e85e resume_offset={physical offset}"
+```
+And update:
+
+```bash
+sudo update-grub
 ```
 
 <hr>
