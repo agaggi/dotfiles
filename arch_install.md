@@ -82,7 +82,7 @@ pacman -S grub efibootmgr dosfstools os-prober mtools
 ### Graphics
 
 - If you have an Intel CPU, install `intel-ucode` instead of `amd-ucode`
-- You sould install `lib32-nvidia-utils` and `lib32-nvidia-libgl` once you have *multilib* enabled for *Steam*
+- You should install `lib32-nvidia-utils` and `lib32-nvidia-libgl` once you have *Multilib* enabled for *Steam*
 
 ```bash
 pacman -S amd-ucode xorg-server mesa nvidia nvidia-utils
@@ -202,7 +202,7 @@ Packages I install:
 yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts ttf-twemoji
 ```
 
-### Hibernation (optional)
+## Hibernation (optional)
 
 And specifically for laptops so **hibernation** works...
 
@@ -239,4 +239,6 @@ exit
 
 # Unmount all partitions
 umount -a
+
+reboot
 ```
