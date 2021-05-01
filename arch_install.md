@@ -103,7 +103,7 @@ pacman -S ttf-ubuntu-font-family ttf-sazanami ttf-baekmuk ttf-hannom
 ### Everything Else
 
 ```bash
-pacman -S discord jdk-openjdk gradle neofetch git tree htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager konsole dolphin chromium python-pip spectacle wget unzip ntfs-3g exfatprogs openssh
+pacman -S discord jdk-openjdk gradle neofetch git tree htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager konsole dolphin chromium python-pip spectacle wget unzip zip ntfs-3g exfatprogs openssh
 ```
 
 Note: *Steam* is in the *multilib* library and needs to be enabled.
