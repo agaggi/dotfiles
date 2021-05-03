@@ -13,12 +13,13 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 # Other aliases
-alias ls='ls --color=always'
 alias gitu='git add . && git commit && git push'
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 
 alias df='df -h'				# Human readable sizes
 alias free='free -m'			# Show sizes in MB
-alias grep='grep --color=auto'
 
 # Exporting
 export EDITOR='vim'
