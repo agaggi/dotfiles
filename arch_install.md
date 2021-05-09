@@ -1,6 +1,6 @@
 # Arch Linux Install (UEFI)
 
-> Last revised 12/31/2020
+> Last revised 05/09/2021
 
 Set system date, time, and timezone:
 
@@ -15,7 +15,8 @@ timedatectl set-ntp true
 | Partition    | Size              |
 | :----------: | :---------------: |
 | `/boot/EFI`* | 700MB             |
-| `/`          | Remainder of disk |
+| `/`          | 50GB              |
+| `/home`      | Remainder of Disk |
 
 \* After allocating disk space to the boot partition, press *t* to change the type of the partition to **1** (EFI)
 
@@ -23,14 +24,19 @@ timedatectl set-ntp true
 
 ```bash
 mkfs.ext4 /dev/{root partition}
+mkfs.ext4 /dev/{home partition}
 mkfs.fat -F32 /dev/{boot partition}
 ```
 
 ### Mounting New Partitions
 
 ```bash
-mount /dev/{root partition} /mnt
+# Create new directories
 mkdir -p /mnt/boot/EFI
+mkdir /mnt/home
+
+mount /dev/{root partition} /mnt
+mount /dev/{home partition} /mnt/home
 mount /dev/{boot partition} /mnt/boot/EFI
 ```
 
@@ -65,7 +71,7 @@ hwclock --systohc
         127.0.1.1   {hostname}.localdomain {hostname}
         ```
 
-## Packages (The ones I install)
+## Packages I Install
 
 ### Network
 
@@ -82,7 +88,7 @@ pacman -S grub efibootmgr dosfstools os-prober mtools
 ### Graphics
 
 - If you have an Intel CPU, install `intel-ucode` instead of `amd-ucode`
-- You should install `lib32-nvidia-utils` and `lib32-nvidia-libgl` once you have *Multilib* enabled for *Steam*
+- You should install `lib32-nvidia-utils` and `lib32-nvidia-libgl` once you have `multilib` enabled for *Steam*
 
 ```bash
 pacman -S amd-ucode xorg-server mesa nvidia nvidia-utils
@@ -97,16 +103,17 @@ pacman -S sddm plasma
 ### Fonts
 
 ```bash
-pacman -S ttf-ubuntu-font-family ttf-sazanami ttf-baekmuk ttf-hannom
+pacman -S ttf-ubuntu-font-family noto-fonts-emoji adobe-source-code-pro-fonts
+
+# Asian fonts
+pacman -S adobe-source-han-serif-otc-fonts adobe-source-han-sans-otc-fonts 
 ```
 
 ### Everything Else
 
 ```bash
-pacman -S discord jdk-openjdk gradle neofetch git tree htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager konsole dolphin chromium python-pip spectacle wget unzip zip ntfs-3g exfatprogs openssh
+pacman -S discord jdk-openjdk gradle neofetch git tree htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager alacritty konsole dolphin chromium python-pip spectacle wget unzip zip ntfs-3g exfatprogs openssh
 ```
-
-Note: *Steam* is in the *multilib* library and needs to be enabled.
 
 ## Automatically Enabling Services
 
@@ -129,6 +136,8 @@ passwd {username}
 
 ### Adding Users to the Sudoers File
 
+Enter the following:
+
 ```bash
 EDITOR=vim visudo
 ```
@@ -138,7 +147,7 @@ Then, uncomment `%wheel ALL=(ALL) ALL` to give your account root privileges.
 ## grub
 
 ```bash
-grub-install --target=x86_64-efi --bootloadere-id=Arch --recheck
+grub-install --target=x86_64-efi --bootloader-id=Arch --recheck
 
 mkdir /boot/grub/locale
 
@@ -152,8 +161,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Turn off all swap processes
 swapoff -a
 
-# Resize swap (count representing 17GB)
-dd if=/dev/zero of=/swapfile bs=1G count=17
+# Resize swap (count representing 20GB)
+dd if=/dev/zero of=/swapfile bs=1G count=20
 
 # Change permission and make into swap
 chmod 600 /swapfile
@@ -199,7 +208,7 @@ makepkg -si
 Packages I install:
 
 ```bash
-yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts ttf-twemoji
+yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts
 ```
 
 ## Hibernation (optional)
@@ -239,6 +248,5 @@ exit
 
 # Unmount all partitions
 umount -a
-
 reboot
 ```
