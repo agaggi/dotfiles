@@ -25,29 +25,23 @@ A directory will then be created in `~/.vim` and plugins can now be directly ins
     - A list of themes can be found [here](https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md).
 - [The NERDTree](https://github.com/preservim/nerdtree)
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
-    - Ensure you have `cmake` installed, as well as any other dependencies
+    - Ensure you have `cmake` installed, as well as any other dependencies.
 
-## Konsole
+## Alacritty
 
-### Bash Shell
-
-Erase the contents of the default `.bashrc` and insert the following:
+Copy the config file to `~/.config/alacritty/alacritty.yml`:
 
 ```bash
-source $HOME/{path to dotfiles/bashrc}
+mkdir ~/.config/alacritty
+cp alacritty.yml ~/.config/alacritty/alacritty.yml
 ```
 
-### Nord Colorscheme
+## PCManFM
 
-Copy the `nord.colorscheme` file to the local configuration directory `~/.local/share/konsole`. Then:
+Change the following settings: 
 
-1. Open the Settings menu and select *Edit Current Profile*
-2. Switch to the *Appearance* tab
-3. Select `Nord` from the list
+- Set left side to *Directory Tree*
+- Preferences > General > Default view: **Detailed list view**
+- Preferences > Display > Size of small icons: **32x32**
 
-### Settings
-
-- Font: Source code pro (10 pt.)
-- Window size: 80 x 30
-- Hide scrollbar
-- Don't remember window size
+For theming, run `lxappearance` and select the `arc-dark` theme.

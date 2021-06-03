@@ -112,7 +112,7 @@ pacman -S adobe-source-han-serif-otc-fonts adobe-source-han-sans-otc-fonts
 ### Everything Else
 
 ```bash
-pacman -S discord jdk-openjdk gradle neofetch git tree htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager alacritty konsole dolphin chromium gimp python-pip spectacle wget unzip zip ntfs-3g exfatprogs openssh lshw
+pacman -S discord jdk-openjdk gradle neofetch git tree htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager alacritty konsole pcmanfm arc-gtk-theme lxappearance chromium gimp python-pip spectacle wget unzip zip ntfs-3g exfatprogs openssh lshw
 ```
 
 ## Automatically Enabling Services
@@ -120,6 +120,7 @@ pacman -S discord jdk-openjdk gradle neofetch git tree htop cmake firefox vlc li
 ```bash
 systemctl enable NetworkManager
 systemctl enable fstrim.timer
+systemctl enable systemd-timesyncd
 systemctl enable sddm
 ```
 
