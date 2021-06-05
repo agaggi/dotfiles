@@ -1,22 +1,15 @@
 # Desktop Environment Configuration
 
-## Vim
+## NeoVim
 
-Make a new `.vimrc` in your home directory and insert the following:
+Copy `init.vim` to `~/.config/nvim/init.vim`.
 
-```bash
-source $HOME/{path to dotfiles/vimrc}
-```
-
-### Installing Vim-Plug 
-
-Run the following command in the terminal to download vim-plug:
+Incase you need to install *vim-plug* manually: 
 
 ```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
-
-A directory will then be created in `~/.vim` and plugins can now be directly installed in vim with `:PlugInstall` in normal mode.
 
 ### Links to Plugins
 
@@ -24,8 +17,6 @@ A directory will then be created in `~/.vim` and plugins can now be directly ins
 - [lightline.vim](https://github.com/itchyny/lightline.vim)
     - A list of themes can be found [here](https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md).
 - [The NERDTree](https://github.com/preservim/nerdtree)
-- [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
-    - Ensure you have `cmake` installed, as well as any other dependencies.
 
 ## Alacritty
 

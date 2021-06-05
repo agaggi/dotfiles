@@ -14,6 +14,7 @@ alias mv='mv -i'
 
 # Other aliases
 alias gitu='git add . && git commit && git push'
+alias vim='nvim'
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -22,7 +23,7 @@ alias df='df -h'				# Human readable sizes
 alias free='free -m'			# Show sizes in MB
 
 # Exporting
-export EDITOR='vim'
+export EDITOR='nvim'
 export TERM='xterm-256color'
 
 # Nord dir_colors
