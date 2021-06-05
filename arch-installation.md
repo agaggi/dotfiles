@@ -43,7 +43,7 @@ mount /dev/{boot partition} /mnt/boot/EFI
 ### pacstrap and /etc/fstab
 
 ```bash
-pacstrap /mnt base base-devel linux linux-firmware vim
+pacstrap /mnt base base-devel linux linux-firmware neovim
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Enter your build of Arch Linux 
@@ -140,7 +140,7 @@ passwd {username}
 Enter the following:
 
 ```bash
-EDITOR=vim visudo
+EDITOR=nvim visudo
 ```
 
 Then, uncomment `%wheel ALL=(ALL) ALL` to give your account root privileges.
