@@ -7,12 +7,12 @@ endif
 
 " User Interface
 set number relativenumber
-set ruler					          " Shows current cursor position (row, col) 
+set ruler					" Shows current cursor position (row, col) 
 set showmatch
-set showcmd					        " Shows commands as you type
-set mouse=a					        " Enables mouse functionality
+set showcmd					" Shows commands as you type
+set mouse=a					" Enables mouse functionality
 set laststatus=2
-set noshowmode				      " Hides default mode shower at the bottom
+set noshowmode				" Hides default mode shower at the bottom
 set cursorline
 set encoding=utf-8
 
