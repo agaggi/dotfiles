@@ -1,6 +1,6 @@
 # Desktop Environment Configuration
 
-## NeoVim
+## [Neovim](https://github.com/neovim/neovim)
 
 Copy `init.vim` to `~/.config/nvim/init.vim`.
 
@@ -18,14 +18,9 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     - A list of themes can be found [here](https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md).
 - [The NERDTree](https://github.com/preservim/nerdtree)
 
-## Alacritty
+## [Alacritty](https://github.com/alacritty/alacritty)
 
-Copy the config file to `~/.config/alacritty/alacritty.yml`:
-
-```bash
-mkdir ~/.config/alacritty
-cp alacritty.yml ~/.config/alacritty/alacritty.yml
-```
+Copy `alacritty.yml` to `~/.config/alacritty/alacritty.yml`.
 
 ## PCManFM
 

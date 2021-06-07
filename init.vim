@@ -7,12 +7,12 @@ endif
 
 " User Interface
 set number relativenumber
-set ruler					" Shows current cursor position (row, col) 
+set ruler					          " Shows current cursor position (row, col) 
 set showmatch
-set showcmd					" Shows commands as you type
-set mouse=a					" Enables mouse functionality
+set showcmd					        " Shows commands as you type
+set mouse=a					        " Enables mouse functionality
 set laststatus=2
-set noshowmode				" Hides default mode shower at the bottom
+set noshowmode				      " Hides default mode shower at the bottom
 set cursorline
 set encoding=utf-8
 
@@ -44,7 +44,7 @@ colorscheme nord
 let g:lightline = {'colorscheme': 'nord'}
 
 " NERDTree 
-map <C-z> :NERDTreeToggle<CR>   " CTRL + z -- toggles NERDTree
+map <C-z> :NERDTreeToggle<CR>   " CTRL + Z -- toggles NERDTree
 
 " If the last window open is NERDTree, then it will automatically close
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

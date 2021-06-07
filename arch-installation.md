@@ -1,6 +1,6 @@
 # Arch Linux Install (UEFI)
 
-> Last revised 05/09/2021
+> Last revised 06/06/2021
 
 Set system date, time, and timezone:
 
