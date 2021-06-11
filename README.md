@@ -29,5 +29,6 @@ Change the following settings:
 - Set left side to *Directory Tree*
 - Preferences > General > Default view: **Detailed list view**
 - Preferences > Display > Size of small icons: **32x32**
+- Preferences > Advanced > Terminal emulator: **alacritty**
 
 For theming, run `lxappearance` and select the `arc-dark` theme.
