@@ -103,16 +103,16 @@ pacman -S sddm plasma
 ### Fonts
 
 ```bash
-pacman -S ttf-ubuntu-font-family noto-fonts-emoji adobe-source-code-pro-fonts
+pacman -S ttf-ubuntu-font-family noto-fonts-emoji adobe-source-code-pro-fonts ttf-nerd-fonts-symbols
 
 # Asian fonts
-pacman -S adobe-source-han-serif-otc-fonts adobe-source-han-sans-otc-fonts 
+pacman -S adobe-source-han-serif-otc-fonts adobe-source-han-sans-otc-fonts
 ```
 
 ### Everything Else
 
 ```bash
-pacman -S discord jdk-openjdk gradle neofetch git tree htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager alacritty pcmanfm arc-gtk-theme lxappearance chromium gimp python-pip spectacle wget unzip zip ntfs-3g exfatprogs openssh lshw dos2unix okular dart
+pacman -S discord jdk-openjdk gradle neofetch git tree htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager alacritty pcmanfm arc-gtk-theme lxappearance chromium gimp python-pip spectacle wget unzip zip ntfs-3g exfatprogs openssh lshw dos2unix okular dart man exa bat
 ```
 
 ## Automatically Enabling Services
@@ -209,7 +209,7 @@ makepkg -si
 Packages I install:
 
 ```bash
-yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts
+yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts duf
 ```
 
 ## Hibernation (optional)

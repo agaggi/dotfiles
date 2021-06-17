@@ -1,6 +1,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Exporting
+export TERM='xterm-256color'
+export EDITOR='nvim'
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 # Start ssh agent for github/gitlab
 eval "$(ssh-agent -s)"
 
@@ -8,23 +13,22 @@ eval "$(ssh-agent -s)"
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# Confirm we want to overwrite
+# Aliases
+alias gitu='git add . && git commit && git push'
+alias vim='nvim'
+alias grep='grep --color=auto'
+
+## Confirm we want to overwrite
 alias cp='cp -i'
 alias mv='mv -i'
 
-# Other aliases
-alias gitu='git add . && git commit && git push'
-alias vim='nvim'
+## Modern Unix replacement programs
+alias cat='bat'
+alias df='duf'
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-
-alias df='df -h'				# Human readable sizes
-alias free='free -m'			# Show sizes in MB
-
-# Exporting
-export EDITOR='nvim'
-export TERM='xterm-256color'
+alias ls='exa'
+alias ll='exa --git --long --header --all'
+alias tree='exa --tree'
 
 # Nord dir_colors
 colors=$HOME/.dir_colors
