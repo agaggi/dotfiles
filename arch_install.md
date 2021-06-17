@@ -112,7 +112,7 @@ pacman -S adobe-source-han-serif-otc-fonts adobe-source-han-sans-otc-fonts
 ### Everything Else
 
 ```bash
-pacman -S discord jdk-openjdk gradle neofetch git tree htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager alacritty pcmanfm arc-gtk-theme lxappearance chromium gimp python-pip spectacle wget unzip zip ntfs-3g exfatprogs openssh lshw dos2unix okular dart man exa bat
+pacman -S discord jdk-openjdk gradle neofetch git htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager alacritty pcmanfm arc-gtk-theme lxappearance chromium gimp python-pip spectacle wget unzip zip ntfs-3g exfatprogs openssh lshw dos2unix okular dart man exa bat
 ```
 
 ## Automatically Enabling Services
