@@ -1,6 +1,6 @@
 # Arch Linux Install (UEFI)
 
-> Last revised 06/06/2021
+> Last revised 06/28/2021
 
 Set system date, time, and timezone:
 
@@ -31,7 +31,7 @@ mkfs.fat -F32 /dev/{boot partition}
 ### Mounting New Partitions
 
 ```bash
-# Create new directories
+# /mnt will be where the Arch installation is built
 mkdir -p /mnt/boot/EFI
 mkdir /mnt/home
 
@@ -46,7 +46,7 @@ mount /dev/{boot partition} /mnt/boot/EFI
 pacstrap /mnt base base-devel linux linux-firmware neovim
 genfstab -U /mnt >> /mnt/etc/fstab
 
-# Enter your build of Arch Linux 
+# Enter your Arch installation 
 arch-chroot /mnt
 ```
 
@@ -71,7 +71,9 @@ hwclock --systohc
         127.0.1.1   {hostname}.localdomain {hostname}
         ```
 
-## Packages I Install
+## Packages
+
+**Note**: The 20 fastest mirrors are written in `/etc/pacman.d/mirrorlist` by a program called [reflector](https://wiki.archlinux.org/title/Reflector)
 
 ### Network
 
@@ -87,12 +89,19 @@ pacman -S grub efibootmgr dosfstools os-prober mtools
 
 ### Graphics
 
-- If you have an Intel CPU, install `intel-ucode` instead of `amd-ucode`
-- You should install `lib32-nvidia-utils` and `lib32-nvidia-libgl` once you have `multilib` enabled for *Steam*
+- If you have an **Intel** CPU, install `intel-ucode` **instead** of `amd-ucode`. I.e.
 
 ```bash
 pacman -S amd-ucode xorg-server mesa nvidia nvidia-utils
 ```
+
+for AMD...
+
+```bash
+pacman -S intel-ucode xorg-server mesa
+```
+
+for a laptop without a discrete GPU as an example.
 
 ### Desktop Environment (KDE)
 
@@ -100,20 +109,15 @@ pacman -S amd-ucode xorg-server mesa nvidia nvidia-utils
 pacman -S sddm plasma
 ```
 
-### Fonts
+### Post-install packages
+
+If you wait to do this, you will want to install a terminal (i.e. `alacritty`) **before** first booting into the fresh installation so you can run the following:
 
 ```bash
-pacman -S ttf-ubuntu-font-family noto-fonts-emoji adobe-source-code-pro-fonts ttf-nerd-fonts-symbols
-
-# Asian fonts
-pacman -S adobe-source-han-serif-otc-fonts adobe-source-han-sans-otc-fonts
+pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort pkglist.txt))
 ```
 
-### Everything Else
-
-```bash
-pacman -S discord jdk-openjdk gradle neofetch git htop cmake firefox vlc libreoffice-fresh obs-studio partitionmanager alacritty pcmanfm arc-gtk-theme lxappearance chromium gimp python-pip spectacle wget unzip zip ntfs-3g exfatprogs openssh lshw dos2unix okular dart man exa bat
-```
+This will install all packages listed inside (except AUR ones).
 
 ## Automatically Enabling Services
 
@@ -148,8 +152,10 @@ Then, uncomment `%wheel ALL=(ALL) ALL` to give your account root privileges.
 ## grub
 
 ```bash
+# --bootloader-id={name} defines the name of the bootloader (i.e. Windows 10)
 grub-install --target=x86_64-efi --bootloader-id=Arch --recheck
 
+# May already be present
 mkdir /boot/grub/locale
 
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/en.mo
@@ -171,7 +177,7 @@ mkswap /swapfile
 swapon /swapfile
 ```
 
-Ensure the following line is in your `/etc/fstab` file:
+Once created, ensure the following line is in your `/etc/fstab` file:
 
 ```bash
 /swapfile   none    swap    sw  0   0
@@ -191,6 +197,8 @@ Then you can install:
 ```bash
 pacman -S lib32-nvidia-utils lib32-nvidia-libgl steam
 ```
+
+For Nvidia GPUs, you **need** the two lib packages for steam to work right.
 
 ## yay (AUR)
 
