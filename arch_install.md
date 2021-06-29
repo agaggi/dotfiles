@@ -1,6 +1,6 @@
 # Arch Linux Install (UEFI)
 
-> Last revised 06/28/2021
+> Last revised 06/29/2021
 
 Set system date, time, and timezone:
 
@@ -114,7 +114,7 @@ pacman -S sddm plasma
 If you wait to do this, you will want to install a terminal (i.e. `alacritty`) **before** first booting into the fresh installation so you can run the following:
 
 ```bash
-pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort pkglist.txt))
+pacman -S --needed $(comm -12 <(pacman -Slq | sort) < (sort packages.txt))
 ```
 
 This will install all packages listed inside (except AUR ones).
@@ -192,13 +192,11 @@ To enable multilib repository, uncomment the `[multilib]` section in `/etc/pacma
 Include = /etc/pacman.d/mirrorlist
 ```
 
-Then you can install:
+Then you can install (you **need** the two lib packages for steam to work right):
 
 ```bash
 pacman -S lib32-nvidia-utils lib32-nvidia-libgl steam
 ```
-
-For Nvidia GPUs, you **need** the two lib packages for steam to work right.
 
 ## yay (AUR)
 
@@ -217,16 +215,18 @@ makepkg -si
 Packages I install:
 
 ```bash
-yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts duf
+yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts duf brave-bin
 ```
 
 ## Hibernation (optional)
 
-And specifically for laptops so **hibernation** works...
+To make it so your laptop doesn't crash when you close the lid...
 
 ```bash
 yay -S hibernator update-grub
 ```
+
+For additional reference, see [here](https://confluence.jaytaala.com/display/TKB/Use+a+swap+file+and+enable+hibernation+on+Arch+Linux+-+including+on+a+LUKS+root+partition).
 
 ```bash
 sudo hibernator
