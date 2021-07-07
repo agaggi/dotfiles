@@ -1,6 +1,6 @@
 # Arch Linux Install (UEFI)
 
-> Last revised 06/29/2021
+> Last revised 07/07/2021
 
 Set system date, time, and timezone:
 
@@ -114,7 +114,7 @@ pacman -S sddm plasma
 If you wait to do this, you will want to install a terminal (i.e. `alacritty`) **before** first booting into the fresh installation so you can run the following:
 
 ```bash
-pacman -S --needed $(comm -12 <(pacman -Slq | sort) < (sort packages.txt))
+pacman -S --needed - < packages.txt
 ```
 
 This will install all packages listed inside (except AUR ones).
