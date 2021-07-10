@@ -26,9 +26,9 @@ alias mv='mv -i'
 alias cat='bat'
 alias df='duf'
 
-alias ls='exa --color=always'
-alias ll='exa -al --git --header --color=always'
-alias tree='exa --tree --color=always'
+alias ls='exa --color=always --group-directories-first'
+alias ll='exa -al --git --header --color=always --group-directories-first'
+alias tree='exa --tree --color=always --group-directories-first'
 
 # Nord dir_colors
 colors=$HOME/.dir_colors
