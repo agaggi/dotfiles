@@ -155,7 +155,7 @@ Then, uncomment `%wheel ALL=(ALL) ALL` to give your account root privileges.
 ## grub
 
 ```bash
-# --bootloader-id={name} defines the name of the bootloader (i.e. Windows 10)
+# --bootloader-id={name} defines the name of the bootloader (ex: Windows 10)
 grub-install --target=x86_64-efi --bootloader-id=Arch --recheck
 
 # May already be present
@@ -219,6 +219,7 @@ Packages I install:
 
 ```bash
 yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts duf flutter
+google-chrome
 ```
 
 ## Hibernation (optional)

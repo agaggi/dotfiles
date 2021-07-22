@@ -5,7 +5,6 @@ arc-gtk-theme
 bat
 chromium
 cmake
-dart
 discord
 dos2unix
 exa
