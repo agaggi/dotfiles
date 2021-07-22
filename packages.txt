@@ -1,4 +1,4 @@
-adobe-source-han-sans-otc-fonts
+﻿adobe-source-han-sans-otc-fonts
 adobe-source-han-serif-otc-fonts
 alacritty
 arc-gtk-theme
@@ -21,6 +21,7 @@ gvfs-smb
 gzip
 htop
 jdk-openjdk
+krita
 libreoffice-fresh
 lshw
 lxappearance

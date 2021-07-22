@@ -18,7 +18,8 @@ timedatectl set-ntp true
 | `/`          | 50GB              |
 | `/home`      | Remainder of Disk |
 
-\* After allocating disk space to the boot partition, press *t* to change the type of the partition to **1** (EFI)
+\* After allocating disk space to the boot partition, press *t* to change the type of the 
+partition to **1** (EFI)
 
 ### Creating Filesystems
 
@@ -73,7 +74,8 @@ hwclock --systohc
 
 ## Packages
 
-**Note**: The 20 fastest mirrors are written in `/etc/pacman.d/mirrorlist` by a program called [reflector](https://wiki.archlinux.org/title/Reflector)
+**Note**: The 20 fastest mirrors are written in `/etc/pacman.d/mirrorlist` by a program 
+called [reflector](https://wiki.archlinux.org/title/Reflector)
 
 ### Network
 
@@ -89,7 +91,7 @@ pacman -S grub efibootmgr dosfstools os-prober mtools
 
 ### Graphics
 
-- If you have an **Intel** CPU, install `intel-ucode` **instead** of `amd-ucode`. I.e.
+- If you have an **Intel** CPU, install `intel-ucode` **instead** of `amd-ucode`.
 
 ```bash
 pacman -S amd-ucode xorg-server mesa nvidia nvidia-utils
@@ -111,7 +113,8 @@ pacman -S sddm plasma
 
 ### Post-install packages
 
-If you wait to do this, you will want to install a terminal (i.e. `alacritty`) **before** first booting into the fresh installation so you can run the following:
+If you wait to do this, you will want to install a terminal (i.e. `alacritty`) **before** 
+first booting into the fresh installation so you can run the following:
 
 ```bash
 pacman -S --needed - < packages.txt
@@ -215,7 +218,7 @@ makepkg -si
 Packages I install:
 
 ```bash
-yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts duf brave-bin
+yay -S visual-studio-code-bin spotify zoom minecraft-launcher ttf-ms-fonts duf flutter
 ```
 
 ## Hibernation (optional)
