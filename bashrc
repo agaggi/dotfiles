@@ -6,7 +6,8 @@ export TERM="xterm-256color"
 export EDITOR="nvim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-export PATH="$PATH:/home/alex/flutter/bin"
+## So Flutter can find chrome
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 
 # Start ssh agent for github/gitlab
 eval "$(ssh-agent -s)"
